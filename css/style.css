@@ -1,0 +1,654 @@
+/* Resetowanie domyślnych marginesów, paddingów i ustawienie modelu box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja całej strony */
+body {
+    font-family: 'Nunito Sans', sans-serif; /* Ustawienie czcionki */
+    color: white; /* Kolor tekstu */
+    background: url('../images/Image.jpg') no-repeat center center;
+    background-size: contain; /* Obraz zmieści się w kontenerze */
+    width: 1372px;
+    height: 807px;
+    margin: 0 auto; /* Wyśrodkowanie strony */
+}
+.header{
+    background: #00000066 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF33;
+    opacity: 1;
+}
+/* Kontener odpowiedzialny za wyśrodkowanie elementów nagłówka */
+.container {
+    display: flex; /* Użycie flexboxa do ustawienia elementów w rzędzie */
+    justify-content: space-between; /* Rozłożenie elementów na krańcach */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    padding: 15px 160px; /* Dodanie wewnętrznych odstępów */
+    width: 1371px;
+    height: 93px;
+}
+
+/* Stylizacja logo */
+.logo {
+    display: flex; /* Ustawienie logo w rzędzie */
+    align-items: center; /* Wyrównanie elementów w pionie */    
+    text-transform: uppercase; /* Zamiana tekstu na wielkie litery */
+    width: 281px;
+    height: 47px;
+}
+
+/* Styl dla logo */
+.nav .logo {
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: white; /* Biały kolor tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    
+}
+
+/* Styl dla nawigacji */
+.nav {
+    width: 486px; /* Dopasowanie do wymiarów */
+    height: 88px;
+    display: flex;
+    justify-content: space-between; /* Równomierne rozmieszczenie */
+    align-items: center;
+}
+/* Nawigacja */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Układ w jednej linii */
+    justify-content: center; /* Wyśrodkowanie nawigacji */
+    align-items: center; /* Wyrównanie w pionie */
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    
+}
+/* Styl dla każdego elementu listy */
+.nav ul li {
+    position: relative;
+    padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 128px; 
+        height: 88px;    
+}
+
+/* Styl dla wszystkich linków */
+.nav ul li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    opacity: 1;
+    padding: 20px 30px; /* Dodaje przestrzeń wokół tekstu */
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+/* Overlay tylko dla pierwszego linku */
+.nav ul li:first-child a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF33 0% 0% no-repeat padding-box;
+    z-index: -1;
+    opacity: 1; /* Zawsze widoczne */
+}
+/* Sekcja Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Wyrównanie do lewej */
+    text-align: center;
+    height: calc(100% - 90px);
+    position: relative;
+}
+/* Kontener dla treści */
+.hero-content {
+    position: absolute;
+    top: calc(254px - 90px);
+    left: 160px;
+    width: 1046px;
+    height: 297px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Równomierne rozmieszczenie elementów */
+
+}
+/* Nagłówek główny */
+.hero-title {
+    position: relative;
+    left: 203px;
+    right: 200px;
+    width: 643px;
+    height: 123px;    
+    font: normal normal 900 90px/90px Nunito Sans;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;    
+    text-shadow: 0px 3px 6px #00000040;
+    opacity: 1;
+    margin-bottom: 10px; /* Odstęp 10px od opisu */
+}
+
+
+/* Opis w sekcji Hero */
+.hero-description {
+    width: 1046px;
+    height: 44px;
+    margin-bottom: 47px; 
+    margin-top: 10px;
+    text-align: center;
+    font: normal normal bold 16px/22px Nunito Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+/* Kontener przycisków */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Odstęp między przyciskami */
+}
+
+/* Stylizacja przycisków */
+.btn {
+    display: flex; /* Umożliwia wyśrodkowanie tekstu */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    transition: 0.3s; /* Płynna animacja zmiany stylu */
+    font: normal normal bold 16px/22px "Nunito Sans", sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Stylizacja czerwonego przycisku */
+.btn.btn-red1 {
+    background: #FF0000;
+    color: white; /* Kolor tekstu */
+    box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.3);    
+    width: 220px;
+    height: 66px;    
+    border-radius: 40px;
+    text-align: center;
+    font: normal normal bold 16px/22px Nunito Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+/* Stylizacja białego przycisku */
+.btn.btn-white1 {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    border: 2px solid #FF0000; /* Dodanie obramowania */
+    width: 226px;
+    height: 66px;
+    text-align: center;
+    font: normal normal bold 16px/22px Nunito Sans;
+    letter-spacing: 0px;
+    color: #FF0000;
+}
+
+/* Efekt hover dla czerwonego przycisku */
+.btn.btn-red:hover {
+    background: darkred;
+}
+
+/* Efekt hover dla białego przycisku */
+.btn.btn-white:hover {
+    background: lightgray;
+}
+
+/* Stylizacja sekcji przewijania w dół */
+.scroll-down {
+    position: absolute;
+    top: 778px;
+    width: 55px;
+    height: 55px;
+    bottom: 30px; /* Odsunięcie od dolnej krawędzi */
+    left: 50%; /* Pozycjonowanie na środku */
+    transform: translateX(-50%); /* Wyrównanie względem środka */
+}
+
+
+/* Stylizacja czerwonego kółka wokół strzałki */
+.scroll-down .circle {
+    width: 50px; /* Szerokość kółka */
+    height: 50px; /* Wysokość kółka */
+    background: red; /* Kolor tła */
+    border-radius: 50%; /* Zaokrąglenie kształtu */
+    display: flex; /* Ustawienie flexboxa */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+}
+
+/* Stylizacja strzałki w kółku */
+.scroll-down img {
+    width: 20px; /* Szerokość ikony strzałki */
+    cursor: pointer; /* Ustawienie kursora jako wskaźnik */
+}
+/* Stylizacja całej sekcji bloga */
+#blog {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 50px 20px; /* Odstępy wewnętrzne */
+    background: #fff; /* Kolor tła */
+    margin-top: 65px;
+    margin-bottom: 35px;
+}
+/* Stylizacja nagłówka sekcji */
+h2 {
+    text-align: left;
+    font: normal normal bold 35px/47px Nunito Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Odstęp między linią a tekstem */
+}
+
+/* Czerwone linie po bokach */
+h2::before, 
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;  /* Długość linii */
+    height: 3px;  /* Grubość linii */
+    background: red;
+}
+
+
+/* Kontener na wszystkie wpisy blogowe */
+.blog-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie */
+    gap: 30px; /* Odstępy między elementami */
+    flex-wrap: nowrap; /* Zapewnienie, że są w jednym rzędzie */
+    max-width: 1200px; /* Ograniczenie szerokości */
+    margin: 0 auto; /* Wyśrodkowanie na stronie */
+}
+
+/* Stylizacja pojedynczego wpisu blogowego */
+.blog-item {
+    width: 30%; /* Każdy wpis zajmuje 30% szerokości */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stylizacja obrazków we wpisach */
+.blog-item img {
+    width: 100%; /* Dopasowanie szerokości do kontenera */
+    height: 234px; /* Taka sama wysokość jak na screenie */
+    object-fit: cover; /* Zapewnia dopasowanie i wypełnienie */
+    border-radius: 10px;
+}
+
+
+/* Stylizacja tytułu wpisu */
+.blog-item h3 {
+    font-size: 19px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #6A6A6A;
+    text-align: left;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+/* Stylizacja opisu wpisu */
+.blog-item p {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #6A6A6A;
+    text-align: left;
+    line-height: 19px;
+    margin: 10px 0 15px;
+}
+
+
+/* Stylizacja przycisku "READ MORE" */
+.read-more {
+    display: inline-block;
+    width: 142px; /* Ustawienie szerokości  */
+    height: 40px; /* Ustawienie wysokości */
+    line-height: 40px; /* Wyśrodkowanie tekstu w pionie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background: #FF0000; 
+    color: white;
+    text-decoration: none;
+    border-radius: 40px; 
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 14px; /* Dopasowany rozmiar czcionki */
+    box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.3); /* Cień */
+    transition: background 0.3s ease; /* Płynna zmiana koloru */
+    float: left; /* Ustawienie przycisku po prawej stronie */
+}
+
+/* Efekt po najechaniu */
+.read-more:hover {
+    background: darkred; /* Ciemniejszy odcień czerwieni */
+}
+
+/* Kontener na usługi */
+.service-container {
+    display: flex; /* Używa Flexbox do układu elementów */
+    justify-content: center; /* Centruje elementy w poziomie */
+    align-items: center; /* Centruje elementy w pionie */
+    text-align: center; /* Centruje wszystkie elementy w kontenerze */
+    gap: 107px; /* Odstęp między ikonami */
+    width: 1366px; /* Szerokość kontenera */
+    height: 643px; /* Wysokość kontenera */
+    background: #28272C 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+/* Nagłówek sekcji */
+.service-title {
+    text-align: left;/* Wyrównanie do lewej */
+    font: normal normal bold 35px/47px Nunito Sans;
+    letter-spacing: 0px;/* Brak odstępów między literami */
+    color: #FFFFFF;
+    opacity: 1; /* Pełna widoczność */
+    width: 146px; /* Szerokość tekstu */
+    height: 47px; /* Wysokość tekstu */
+    position: absolute; /* Pozycjonowanie względem kontenera */
+    top: 1574px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Odstęp między liniami a tekstem */
+    margin-bottom: 40px; /* Dystans od sekcji z obrazkami */
+}
+.line {
+    width: 55px;  /* Długość linii */
+    height: 3px;  /* Grubość */
+    background: #FF0000;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+}
+/* Główna sekcja SERVICE */
+.box{
+    width: 231px;
+    height: 361px;
+}
+.service-section {
+    background-color: #28272C; /* Ciemne tło sekcji */
+    padding: 75px 0; /* Odstęp od góry i dołu */
+    display: flex; /* Używa Flexbox do układu elementów */
+    flex-direction: column; /* Układa elementy w kolumnie */
+    align-items: center; /* Centruje elementy w poziomie */
+    justify-content: center; /* Centruje elementy w pionie */
+}
+
+
+/* Opis usługi */
+.service-description {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    color: #B2B2B2;
+    text-align: center;    
+    width: 231px;
+    position: absolute;
+    top: 1922px;
+    left: 154px;
+}
+
+
+/* Stylizacja pojedynczej usługi */
+.service-item {
+    text-align: center; /* Wyrównanie do środka */ 
+       width: 170px; /* Szerokość kontenera */
+    height: 170px; /* Wysokość kontenera */
+
+    margin-left: 84px;
+    margin-right: 84px;
+}
+
+/* Stylizacja obrazków */
+.service-item img {
+    width: 100%; /* Szerokość na 100% kontenera */
+    height: auto; /* Automatyczne dopasowanie wysokości */
+    border-radius: 85px; /* Okrągły kształt obrazka */
+}
+.service-title h3 {
+    font-size: 19px; /* Rozmiar czcionki */
+    font-weight: normal; /* Normalna grubość czcionki */
+    font-family: "Nunito Sans", sans-serif; /* Czcionka */
+    color: #FFFFFF; /* Kolor tekstu - biały */
+    text-align: left; /* Wyrównanie do lewej */
+    width: 231px; /* Szerokość */
+    height: 26px; /* Wysokość */
+    position: absolute; /* Pozycjonowanie */
+    top: 1881px; /* Pozycja w pionie */
+    left: 154px; /* Pozycja w poziomie */
+    letter-spacing: 0px; /* Odstęp między literami */
+    opacity: 1; /* Widoczność */
+}
+
+/* Przycisk "READ MORE" */
+.read-more-btn {
+    position: absolute; /* Pozycjonowanie */
+    top: 2017px; /* Pozycja w pionie */
+    left: 198px; /* Pozycja w poziomie */
+    width: 142px; /* Szerokość przycisku */
+    height: 40px; /* Wysokość przycisku */
+    
+    background-color: #FF0000; /* Czerwone tło */
+    color: #FFFFFF; /* Biały kolor tekstu */
+    font-weight: bold; /* Pogrubiona czcionka */
+    text-align: center; /* Wyrównanie do środka */
+    line-height: 40px; /* Wyśrodkowanie tekstu w pionie */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    display: inline-block; /* Blokowy układ */
+    
+    border-radius: 40px; /* Zaokrąglone rogi */
+    box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.3); /* Cień pod przyciskiem */
+    opacity: 1; /* Pełna widoczność */
+    transition: background 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+/* Efekt hover dla przycisku */
+.read-more-btn:hover {
+    background-color: #CC0000; /* Przyciemnia kolor tła po najechaniu */
+}
+   /* Sekcja kontaktu */
+#contact {
+    text-align: center; /* Wyśrodkowanie tekstu w sekcji */
+    padding: 50px 0; /* Wewnętrzny odstęp góra-dół */
+    background-color: #f9f9f9; /* Kolor tła */
+}
+
+/* Kontener sekcji kontaktu */
+.contact-container {
+    display: flex; /* Układ elastyczny - elementy w jednej linii */
+    align-items: center; /* Wyrównanie elementów w pionie */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+    width: 904px; /* Szerokość kontenera */
+    height: 489px; /* Wysokość kontenera */
+    gap: 20px; /* Odstęp między elementami */
+    margin-left: 231px; /* Przesunięcie kontenera w prawo */
+    position: relative; /* Ustawienie pozycji względem jego zawartości */
+}
+
+/* Stylizacja obrazu w sekcji kontaktu */
+.contact-image img {
+    width: 444px; /* Szerokość obrazu */
+    height: 317px; /* Wysokość obrazu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    background: transparent url('img/Form Photo.png') 0% 0% no-repeat padding-box; /* Tło obrazu */
+    opacity: 1; /* Pełna widoczność */
+}
+
+/* Stylizacja formularza */
+.contact-form {
+    display: flex; /* Elementy ułożone w kolumnie */
+    flex-direction: column;
+    gap: 15px; /* Odstępy między polami formularza */
+    margin-top: 82px; /* Odstęp od góry */
+}
+
+/* Stylizacja pól formularza */
+.contact-form input,
+.contact-form textarea {
+    width: 444px; /* Szerokość pól */
+    height: 38px; /* Wysokość pól */
+    padding: 10px; /* Wewnętrzny odstęp */
+    border: 1px solid #ccc; /* Szary obramowanie */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    font-size: 16px; /* Wielkość czcionki */
+}
+
+/* Stylizacja pola tekstowego */
+.contact-form textarea {
+    height: 140px; /* Większa wysokość dla pola tekstowego */
+    resize: none; /* Wyłączenie zmiany rozmiaru */
+}
+
+/* Stylizacja zgody na przetwarzanie danych */
+.consent {
+    display: flex; /* Układ elastyczny */
+    align-items: center; /* Wyrównanie w pionie */
+    gap: 10px; /* Odstęp między checkboxem a tekstem */
+    font-size: 12px; /* Wielkość czcionki */
+    width: 444px; /* Szerokość sekcji */
+    height: 71px; /* Wysokość sekcji */
+    margin-bottom: 60px; /* Odstęp od dołu */
+}
+
+/* Stylizacja checkboxa */
+.consent input[type="checkbox"] {
+    width: 22px; /* Szerokość checkboxa */
+    height: 22px; /* Wysokość checkboxa */
+}
+
+/* Stylizacja etykiety zgody */
+label[for="consent"] {
+    width: 412px; /* Szerokość etykiety */
+    height: 71px; /* Wysokość etykiety */
+    font-family: "Open Sans", sans-serif; /* Ustawienie czcionki */
+    font-weight: 300; /* Cieńsza czcionka */
+    font-size: 10px; /* Wielkość czcionki */
+    line-height: 14px; /* Wysokość linii */
+    color: #B2B2B2; /* Kolor tekstu */
+    text-align: left; /* Wyrównanie do lewej */
+    opacity: 1; /* Pełna widoczność */
+}
+
+/* Stylizacja przycisku */
+.btn.btn-red {
+    position: absolute; /* Pozycjonowanie względem kontenera */
+    bottom: -40px; /* Przesunięcie przycisku w dół */
+    right: 0; /* Przyklejenie przycisku do prawej */
+    width: 142px; /* Szerokość przycisku */
+    height: 40px; /* Wysokość przycisku */
+    background: #FFFFFF; /* Kolor tła */
+    box-shadow: 0px 3px 6px #FF00004D; /* Cień */
+    border: 1px solid #FF0000; /* Czerwone obramowanie */
+    border-radius: 40px; /* Zaokrąglenie rogów */
+    opacity: 1; /* Pełna widoczność */
+    display: flex; /* Elastyczne wyrównanie tekstu */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    text-align: center; /* Wyrównanie tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: #FF0000; /* Kolor tekstu */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru */
+    margin-bottom: 30px; /* Odstęp od dołu */
+}
+
+/* Efekt hover dla przycisku */
+.btn-red:hover {
+    background-color: darkred; /* Zmiana koloru po najechaniu */
+}
+
+/* Stylizacja stopki */
+.footer {
+    background: #28272C 0% 0% no-repeat padding-box; /* Kolor tła */
+    display: flex; /* Układ elastyczny */
+    justify-content: center; /* Wyśrodkowanie zawartości */
+    align-items: center; /* Wyrównanie w pionie */
+    width: 100%; /* Szerokość na całej stronie */
+    padding: 15px; /* Odstęp wewnętrzny */
+    opacity: 1; /* Pełna widoczność */
+}
+
+/* Kontener stopki */
+.footer-container {
+    max-width: 1200px; /* Maksymalna szerokość */
+    width: 100%; /* Pełna szerokość */
+}
+
+/* Stylizacja logo stopki */
+.footer-logo {
+    display: flex; /* Układ elastyczny */
+    font-weight: bold; /* Pogrubiona czcionka */
+    color: white; /* Kolor tekstu */
+    margin-bottom: 20px; /* Odstęp od linków */
+    font: normal normal 800 25px/34px Nunito Sans; /* Ustawienie czcionki */
+}
+
+/* Logo w stopce */
+.footer-logo img {
+    height: auto; /* Automatyczna wysokość */
+    margin-bottom: 5px; /* Odstęp od tekstu */
+}
+
+/* Kolor czerwony w logo */
+.logo-red {
+    color: #ff3333; /* Czerwony kolor */
+}
+
+/* Kontener linków w stopce */
+.footer-links {
+    display: flex; /* Układ elastyczny */
+    gap: 200px; /* Odstęp między kolumnami */
+}
+
+/* Stylizacja listy linków */
+.footer-links ul {
+    list-style: none; /* Usunięcie punktorów */
+    padding: 0; /* Usunięcie domyślnych odstępów */
+}
+
+/* Stylizacja elementów listy */
+.footer-links ul li {
+    margin-bottom: 10px; /* Odstęp między linkami */
+}
+
+/* Stylizacja linków */
+.footer-links ul li a {
+    text-decoration: none; /* Usunięcie podkreślenia */
+    font-size: 14px; /* Wielkość czcionki */
+    font-weight: 600; /* Pogrubienie */
+    color: white; /* Kolor tekstu */
+}
+
+/* Stylizacja sekcji copyright */
+.footer-copyright {
+    font-size: 12px; /* Wielkość czcionki */
+    color: gray; /* Kolor tekstu */
+    text-align: right; /* Wyrównanie do prawej */
+}
